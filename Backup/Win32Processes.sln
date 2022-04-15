@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win32Processes", "Win32Processes\Win32Processes.csproj", "{483ED40A-74D3-4187-9F1E-DF639ABAE64E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProcess", "TestProcess\TestProcess.csproj", "{3C3D1CDF-CE66-41E7-BCA1-9A1E6D8A8DCD}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{483ED40A-74D3-4187-9F1E-DF639ABAE64E}.Debug.ActiveCfg = Debug|.NET
+		{483ED40A-74D3-4187-9F1E-DF639ABAE64E}.Debug.Build.0 = Debug|.NET
+		{483ED40A-74D3-4187-9F1E-DF639ABAE64E}.Release.ActiveCfg = Release|.NET
+		{483ED40A-74D3-4187-9F1E-DF639ABAE64E}.Release.Build.0 = Release|.NET
+		{3C3D1CDF-CE66-41E7-BCA1-9A1E6D8A8DCD}.Debug.ActiveCfg = Debug|.NET
+		{3C3D1CDF-CE66-41E7-BCA1-9A1E6D8A8DCD}.Debug.Build.0 = Debug|.NET
+		{3C3D1CDF-CE66-41E7-BCA1-9A1E6D8A8DCD}.Release.ActiveCfg = Release|.NET
+		{3C3D1CDF-CE66-41E7-BCA1-9A1E6D8A8DCD}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

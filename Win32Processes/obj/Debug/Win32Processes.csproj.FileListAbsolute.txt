@@ -1,0 +1,6 @@
+D:\HDH\src_Win32Processes\Win32Processes\bin\Debug\Win32Processes.dll
+D:\HDH\src_Win32Processes\Win32Processes\bin\Debug\Win32Processes.pdb
+D:\HDH\src_Win32Processes\Win32Processes\obj\Debug\Win32Processes.csprojAssemblyReference.cache
+D:\HDH\src_Win32Processes\Win32Processes\obj\Debug\Win32Processes.csproj.CoreCompileInputs.cache
+D:\HDH\src_Win32Processes\Win32Processes\obj\Debug\Win32Processes.dll
+D:\HDH\src_Win32Processes\Win32Processes\obj\Debug\Win32Processes.pdb
