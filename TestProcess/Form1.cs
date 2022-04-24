@@ -25,15 +25,8 @@ namespace TestProcess
         private TextBox txtSearch;
         private TabControl tabControl1;
         private TabPage tabPage1;
-        private TabPage tabPage2;
         private TabPage tabPage3;
-        private TextBox textBox3_p2;
-        private TextBox textBox2_p2;
-        private TextBox textBox1_p2;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private VerticalProgressBar progressBar1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
 
         /// <summary>
         /// Required designer variable.
@@ -74,41 +67,41 @@ namespace TestProcess
 		/// </summary>
 		private void InitializeComponent()
 		{
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lstProcesses = new System.Windows.Forms.ListBox();
             this.btnKill = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox3_p2 = new System.Windows.Forms.TextBox();
-            this.textBox2_p2 = new System.Windows.Forms.TextBox();
-            this.textBox1_p2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.progressBar1 = new TestProcess.VerticalProgressBar();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // lstProcesses
             // 
             this.lstProcesses.BackColor = System.Drawing.SystemColors.Info;
-            this.lstProcesses.Location = new System.Drawing.Point(17, 70);
+            this.lstProcesses.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstProcesses.ItemHeight = 18;
+            this.lstProcesses.Location = new System.Drawing.Point(29, 80);
             this.lstProcesses.Name = "lstProcesses";
-            this.lstProcesses.Size = new System.Drawing.Size(207, 264);
+            this.lstProcesses.Size = new System.Drawing.Size(357, 256);
             this.lstProcesses.TabIndex = 0;
             // 
             // btnKill
             // 
             this.btnKill.BackColor = System.Drawing.SystemColors.Control;
             this.btnKill.ForeColor = System.Drawing.Color.Red;
-            this.btnKill.Location = new System.Drawing.Point(79, 352);
+            this.btnKill.Location = new System.Drawing.Point(308, 372);
             this.btnKill.Name = "btnKill";
-            this.btnKill.Size = new System.Drawing.Size(75, 24);
+            this.btnKill.Size = new System.Drawing.Size(96, 28);
             this.btnKill.TabIndex = 1;
             this.btnKill.Text = "KILL";
             this.btnKill.UseVisualStyleBackColor = false;
@@ -121,29 +114,28 @@ namespace TestProcess
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 23);
+            this.label1.Size = new System.Drawing.Size(415, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Processes List";
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(17, 35);
+            this.txtSearch.Location = new System.Drawing.Point(29, 43);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(207, 20);
+            this.txtSearch.Size = new System.Drawing.Size(251, 20);
             this.txtSearch.TabIndex = 4;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(252, 420);
+            this.tabControl1.Size = new System.Drawing.Size(429, 444);
             this.tabControl1.TabIndex = 5;
             // 
             // tabPage1
@@ -155,100 +147,60 @@ namespace TestProcess
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(244, 394);
+            this.tabPage1.Size = new System.Drawing.Size(421, 418);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Tasks";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.progressBar1);
-            this.tabPage2.Controls.Add(this.textBox3_p2);
-            this.tabPage2.Controls.Add(this.textBox2_p2);
-            this.tabPage2.Controls.Add(this.textBox1_p2);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(244, 394);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Memory";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // textBox3_p2
-            // 
-            this.textBox3_p2.Enabled = false;
-            this.textBox3_p2.Location = new System.Drawing.Point(49, 140);
-            this.textBox3_p2.Name = "textBox3_p2";
-            this.textBox3_p2.Size = new System.Drawing.Size(49, 20);
-            this.textBox3_p2.TabIndex = 4;
-            // 
-            // textBox2_p2
-            // 
-            this.textBox2_p2.Enabled = false;
-            this.textBox2_p2.Location = new System.Drawing.Point(49, 85);
-            this.textBox2_p2.Name = "textBox2_p2";
-            this.textBox2_p2.Size = new System.Drawing.Size(49, 20);
-            this.textBox2_p2.TabIndex = 4;
-            // 
-            // textBox1_p2
-            // 
-            this.textBox1_p2.Enabled = false;
-            this.textBox1_p2.Location = new System.Drawing.Point(49, 33);
-            this.textBox1_p2.Name = "textBox1_p2";
-            this.textBox1_p2.Size = new System.Drawing.Size(49, 20);
-            this.textBox1_p2.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 143);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Space:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 88);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Usage:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Total:";
-            // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.chart1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(244, 394);
+            this.tabPage3.Size = new System.Drawing.Size(421, 418);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "CPU";
+            this.tabPage3.Text = "Performance";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // progressBar1
+            // chart1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(141, 16);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(72, 333);
-            this.progressBar1.TabIndex = 5;
+            chartArea1.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
+            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.AxisX.IsLabelAutoFit = false;
+            chartArea1.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            chartArea1.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(0, 0);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            series1.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Top;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.LabelBorderWidth = 5;
+            series1.Legend = "Legend1";
+            series1.LegendText = "RAM";
+            series1.Name = "series1";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Color = System.Drawing.Color.Red;
+            series2.Legend = "Legend1";
+            series2.LegendText = "CPU";
+            series2.Name = "Series2";
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(421, 418);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
             // 
             // Form1
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(252, 420);
+            this.ClientSize = new System.Drawing.Size(429, 444);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -257,14 +209,15 @@ namespace TestProcess
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
 		}
         #endregion
 
         private Thread threadMemory;
+        private Thread threadCpu;
 
 		/// <summary>
 		/// The main entry point for the application.
@@ -277,12 +230,29 @@ namespace TestProcess
 
 		private void Form1_Load(object sender, System.EventArgs e)
 		{
-			LoadProcesses();
+            chart1.ChartAreas[0].AxisX.LabelStyle.Enabled = false;
+            chart1.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
+            chart1.ChartAreas[0].AxisX.MinorGrid.Enabled = false;
+            chart1.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
+            chart1.ChartAreas[0].AxisY.MinorGrid.Enabled = false;
+            chart1.ChartAreas[0].AxisY.Maximum = 100;
+            chart1.ChartAreas[0].AxisY.Title = "Percent";
+
+            chart1.Series[0].BorderWidth = 2;
+
+            chart1.Series[1].BorderWidth = 2;
+            chart1.Series[1].BorderColor = Color.Red;
+
+
+            LoadProcesses();
 
             // Phương thức LoadMemory sẽ sử dụng riêng 1 Thread
             // để cập nhật tình trạng bộ nhớ đang sử dụng
             this.threadMemory = new Thread(LoadMemory);
-            threadMemory.Start();
+            this.threadCpu = new Thread(LoadCpuUsage);
+
+            this.threadMemory.Start();
+            this.threadCpu.Start();
 		}
 
 		private void LoadProcesses()
@@ -297,7 +267,6 @@ namespace TestProcess
 			{
 				lstProcesses.Items.Add(process.ProcessName);
 			});
-
 		}
 
 		private void btnKill_Click(object sender, System.EventArgs e)
@@ -311,7 +280,7 @@ namespace TestProcess
 				process.Kill();
             }
 
-			// Cập nhật lại danh sách 
+			// Sau khi xóa sẽ cập nhật lại danh sách 
 			LoadProcesses();
 		}
 
@@ -364,34 +333,70 @@ namespace TestProcess
                 });
 
                 int freeMemory = totalPlysicalMemory - usageMemory;
-                
-                progressBar1.Minimum = 0;
-                progressBar1.Maximum = totalPlysicalMemory;
 
-                // Xử lý lỗi render khi chạy trong Thread
-                if(progressBar1.InvokeRequired)
-                    progressBar1.BeginInvoke(new Action(() => {
-                        textBox1_p2.Text = totalPlysicalMemory.ToString();
-                        textBox2_p2.Text = usageMemory.ToString();
-                        textBox3_p2.Text = (totalPlysicalMemory - usageMemory).ToString();
-                        progressBar1.Value = usageMemory;
-                    }));
-                else
-                {
-                    textBox1_p2.Text = totalPlysicalMemory.ToString();
-                    textBox2_p2.Text = usageMemory.ToString();
-                    textBox3_p2.Text = (totalPlysicalMemory - usageMemory).ToString();
-                    progressBar1.Value = usageMemory;
-                }
+                // Giới hạn số điểm trên đồ thị tránh việc
+                // có quá nhiều điểm được thêm vào làm đồ thị
+                // bị co nhỏ lại
+                if (chart1.Series[0].Points.Count > 40)
+                    this.removeFirstPoint(0);
 
+                // Tính phần trăm bộ nhớ đã sài / bộ nhớ có sẵn
+                this.point(0, (usageMemory * 100) / totalPlysicalMemory);
 
                 Thread.Sleep(500); // Trì hoãn thời gian lặp lại luồng là 500 mili giây
             }
         }
-        
+
+        private void LoadCpuUsage()
+        {
+            // Tham khảo: https://stackoverflow.com/questions/278071/how-to-get-the-cpu-usage-in-c
+            PerformanceCounter cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
+
+            while (true)
+            {
+                // Giới hạn số điểm trên đồ thị tránh việc
+                // có quá nhiều điểm được thêm vào làm đồ thị
+                // bị co nhỏ lại
+                if (chart1.Series[0].Points.Count > 40)
+                    this.removeFirstPoint(1);
+
+                // Giá trị % sử dụng của CPU 
+                this.point(1, Convert.ToInt32(cpuCounter.NextValue()));
+
+                Thread.Sleep(500);
+            }
+        }
+
+        private int point(int index, int point)
+        {
+            // index là chỉ số của những đường line hiện có trên winform (0: RAM, 1: CPU)
+            // point là điểm được xác định dựa theo trục y
+            if (chart1.InvokeRequired)
+                chart1.BeginInvoke(new Action(() =>
+                {
+                    chart1.Series[index].Points.Add(point);
+                }));
+            else
+                chart1.Series[index].Points.Add(point);
+            return point;
+        }
+
+        private void removeFirstPoint(int index)
+        {
+            // index là chỉ số của những đường line hiện có trên winform (0: RAM, 1: CPU)
+            if (chart1.InvokeRequired)
+                chart1.BeginInvoke(new Action(() =>
+                {
+                    chart1.Series[index].Points.RemoveAt(0);
+                }));
+            else
+                chart1.Series[index].Points.Add(0);
+        }
+
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.threadMemory.Abort();
+            this.threadCpu.Abort();
         }
     }
 }
